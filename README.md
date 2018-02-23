@@ -1,6 +1,9 @@
 # Novasol Frontend Coding Challenge
 
-> Candidate test for a frontend position at Novasol
+Candidate test for a frontend position at Novasol.  
+  
+Challenge brief: https://github.com/adaptdk/frontend-coding-challenge  
+Live demo: http://christoffer-novasol.surge.sh/  
 
 ## Prerequisites
 Make sure to have node 8.0+ and npm 5.0+ installed
@@ -18,4 +21,3 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
