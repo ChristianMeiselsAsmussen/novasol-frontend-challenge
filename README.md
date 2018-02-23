@@ -21,3 +21,6 @@ npm run dev
 npm run build
 ```
 
+### Notes
+The collected form data is logged to the console as an object 
+
