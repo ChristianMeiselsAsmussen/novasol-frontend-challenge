@@ -1,0 +1,55 @@
+@mixin container {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@mixin transition($speed: 0.3s) {
+    transition: all $speed ease;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin shadow-one {
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .07);
+}
+
+@mixin shadow-two {
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .2);
+}
+
+@mixin card-1 {
+    box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+}
+
+@mixin card-2 {
+    box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+}
+
+@mixin hover-state {
+    &:hover, &:active, &:focus, &.active {
+        @content;
+    }
+}
+
+@mixin input-base {
+    background-color: #fff;
+    border: 1px solid $color-lightgrey;
+    border-radius: 3px;
+    font-size: 14px;
+    color: $color-font;
+    padding: 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    @include transition();
+    
+    @include media-down(sm) {
+        font-size: 16px;
+    }
+}

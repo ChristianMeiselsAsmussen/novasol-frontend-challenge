@@ -1,0 +1,37 @@
+
+// Fonts
+// ==========================================================================
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+$font-opensans:               'Open Sans', sans-serif;
+$font-primary:                $font-opensans;
+$font-headings:               $font-opensans;
+$font-size-default:           16px;
+
+// colors -- always define a color variable as $color-
+// ==========================================================================
+$color-primary:               #ff7400;
+$color-white:                 #ffffff;
+$color-lightgrey:             #ececec;
+$color-grey:                  #9D9D9D;
+$color-danger:                #ff3860;
+
+$color-font:                  #2b2b2b;
+
+// custom variables
+// ==========================================================================
+$max-width:                   1200px;
+$gutter-small:                15px;
+$gutter:                      30px;
+$content-padding:             20px;
+$form-border-radius:          7px;
+
+
+// typography
+// ==========================================================================
+$h1-fontsize:                 3.2rem        !default;
+$h2-fontsize:                 2.0625rem     !default;
+$h3-fontsize:                 1.42rem       !default;
+$h4-fontsize:                 1.28rem       !default;
+$h5-fontsize:                 1.14rem       !default;
+$h6-fontsize:                 1rem          !default;
