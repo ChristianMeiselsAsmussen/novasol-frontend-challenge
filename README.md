@@ -1,12 +1,15 @@
-# novasol-coding-challenge
+# Novasol Frontend Coding Challenge
 
-> Novasol frontend candidate coding challenge
+> Candidate test for a frontend position at Novasol
+
+## Prerequisites
+Make sure to have node 8.0+ and npm 5.0+ installed
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-npm install
+npm install # Or yarn install
 
 # serve with hot reload at localhost:8080
 npm run dev
