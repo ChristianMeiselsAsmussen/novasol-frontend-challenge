@@ -63,7 +63,7 @@
             </div>
 
             <div class="form__actions">
-                <button type="submit" @click="processForm" class="btn btn--submit">{{ btnSubmit }}</button>
+                <button type="submit" class="btn btn--submit">{{ btnSubmit }}</button>
                 <button type="reset" class="btn btn--cancel" @click="resetForm">{{ btnCancel }}</button>
             </div>
 
