@@ -350,18 +350,18 @@
                };
 
                 &--submit {
-                    background-color: #3498DB;
+                    background-color: #08b2e3;
 
                     @include  hover-state {
-                        background-color: darken(#3498DB, 10%);
+                        background-color: darken(#08b2e3, 10%);
                     };
                 }
 
                 &--cancel {
-                    background-color: #D43441;
+                    background-color: #DC3441;
 
                     @include hover-state {
-                        background-color: darken(#D43441, 10%);
+                        background-color: darken(#DC3441, 10%);
                     };
                 }
 
