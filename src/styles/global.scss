@@ -50,7 +50,7 @@ a {
     }
     
     &--cancel {
-        @include btn-default($color-red, 9%);
+        @include btn-default($color-red, 11%);
     }
     
     &--add {
