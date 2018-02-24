@@ -22,8 +22,14 @@ a {
 .input-error {
     color: $color-error;
     display: block;
-    font-size: 11px;
+    font-size: $font-size-minor;
     margin-top: 5px;
+}
+
+.input-notice {
+    font-size: $font-size-minor;
+    color: $color-grey;
+    font-weight: bold;
 }
 
 .fade-enter-active {
@@ -32,4 +38,23 @@ a {
 
 .fade-enter, .fade-leave-to {
     opacity: 0;
+}
+
+
+// Button styles
+.btn {
+    @include btn-default;
+    
+    &--submit {
+        @include btn-default($color-blue);
+    }
+    
+    &--cancel {
+        @include btn-default($color-red, 9%);
+    }
+    
+    &--add {
+        padding: 10px 25px;
+        margin-right: 0;
+    }
 }

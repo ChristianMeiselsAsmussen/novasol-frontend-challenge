@@ -23,7 +23,7 @@
             </div>
 
             <div class="form__item">
-                <label>Favorite brands <span>– Add up to 5 different brands</span></label>
+                <label>Favorite brands <span class="input-notice">– Add up to 5 different brands</span></label>
 
                 <div class="inline">
                     <input type="text" class="input-item" ref="newBrand" v-model="newBrand" @keyup.enter="addBrand" placeholder="e.g. Audi">
@@ -39,7 +39,7 @@
                     </li>
                 </ul>
 
-                <p v-if="formBrandMaxiumReached" class="input-error">
+                <p v-if="formBrandMaxiumReached" class="input-notice">
                     {{ formBrandErrorMsg }}
                 </p>
             </div>
@@ -88,7 +88,7 @@
                 formButtonMsg: "Click here to contact us!",
                 formSubmitMsg: "Thank you for contacting us!",
                 formErrorMsg: "Please correct your errors.",
-                formBrandErrorMsg: "You have reached maximum",
+                formBrandErrorMsg: "You have reached the maximum amount.",
                 btnSubmit: "Send",
                 btnCancel: "Cancel",
                 btnAdd: "Add",
@@ -124,10 +124,6 @@
                     // Reset newTask to an empty string so the input field is cleared
                     this.newBrand = "";
                     this.$refs.newBrand.focus();
-                }
-
-                if (newBrand && this.formData.favoriteBrands.length == 5) {
-                    this.formBrandErrorMsg = 'You have reached max!'
                 }
             },
             removeBrand(brand) {
@@ -238,11 +234,6 @@
                     margin-left: 1px;
                     font-weight: bold;
                     user-select: none;
-
-                    span {
-                        font-size: 12px;
-                        color: $color-grey;
-                    }
                 }
 
                 .inline {
@@ -325,49 +316,6 @@
                 &.textarea {
                     height: 120px;
                     resize: none;
-                }
-            }
-
-
-            .btn {
-                display: block;
-                background-color: $color-primary;
-                border-radius: 20px;
-                text-align: center;
-                color: #fff;
-                text-transform: uppercase;
-                border: none;
-                font-weight: bold;
-                padding: 10px 35px;
-                margin: 0 5px;
-                font-size: 13px;
-                @include transition(.15s);
-                outline: none;
-
-               @include hover-state {
-                   cursor: pointer;
-                   background-color: darken($color-primary, 5%);
-               };
-
-                &--submit {
-                    background-color: #08b2e3;
-
-                    @include  hover-state {
-                        background-color: darken(#08b2e3, 10%);
-                    };
-                }
-
-                &--cancel {
-                    background-color: #DC3441;
-
-                    @include hover-state {
-                        background-color: darken(#DC3441, 10%);
-                    };
-                }
-
-                &--add {
-                    padding: 10px 25px;
-                    margin-right: 0;
                 }
             }
 
