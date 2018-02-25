@@ -49,7 +49,7 @@
                 <div class="categories">
                     <div class="categories__item" v-for="item in categories">
                         <label>
-                            <input type="checkbox" :value="item" v-model="formData.checkedCategories">
+                            <input type="checkbox" :name="item" :value="item" v-model="formData.checkedCategories">
                             {{ item }}
                         </label>
                     </div>
@@ -136,7 +136,7 @@
                     email: "",
                     message: "",
                     dateOfBirth: "",
-                    checkedCategory: [],
+                    checkedCategories: [],
                     favoriteBrands: [],
                 };
                 this.showSubmitMsg = false;
