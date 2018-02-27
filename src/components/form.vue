@@ -5,20 +5,39 @@
 
             <div class="form__item">
                 <label>Full name</label>
-                <input type="text" name="name" class="input-item" v-model="formData.name" ref="name" v-validate="'required|alpha_spaces'" data-vv-delay="700" placeholder="Christoffer Berg">
+                <input type="text"
+                       name="name"
+                       class="input-item"
+                       v-model="formData.name"
+                       ref="name"
+                       v-validate="'required|alpha_spaces'"
+                       data-vv-delay="700"
+                       placeholder="Christoffer Berg">
                 <p v-show="errors.has('name')" class="input-error">{{ errors.first('name') }}</p>
             </div>
 
             <div class="form__item">
                 <label>Email</label>
-                <input type="email" name="email" class="input-item" v-model="formData.email" v-validate="'required|email'" data-vv-delay="700" placeholder="eksempel@email.com">
+                <input type="email"
+                       name="email"
+                       class="input-item"
+                       v-model="formData.email"
+                       v-validate="'required|email'"
+                       data-vv-delay="700"
+                       placeholder="eksempel@email.com">
                 <!-- If it has an email error, display the first message associated with it. -->
                 <p v-show="errors.has('email')" class="input-error">{{ errors.first('email') }}</p>
             </div>
 
             <div class="form__item">
                 <label>Date of birth</label>
-                <input type="text" name="date of birth" class="input-item" v-model="formData.dateOfBirth" v-validate="'required|date_format:DD-MM-YYYY'" placeholder="dd-mm-yyyy" data-vv-delay="700">
+                <input type="text"
+                       name="date of birth"
+                       class="input-item"
+                       v-model="formData.dateOfBirth"
+                       v-validate="'required|date_format:DD-MM-YYYY'"
+                       placeholder="dd-mm-yyyy"
+                       data-vv-delay="700">
                 <p v-show="errors.has('date of birth')" class="input-error">{{ errors.first('date of birth') }}</p>
             </div>
 
@@ -26,7 +45,12 @@
                 <label>Favorite brands <span class="input-notice">– Add up to 5 different brands</span></label>
 
                 <div class="inline">
-                    <input type="text" class="input-item" ref="newBrand" v-model="newBrand" @keyup.enter="addBrand" placeholder="e.g. Audi">
+                    <input type="text"
+                           class="input-item"
+                           ref="newBrand"
+                           v-model="newBrand"
+                           @keyup.enter="addBrand"
+                           placeholder="e.g. Audi">
                     <button type="button" class="btn btn--add" @click="addBrand">{{ btnAdd }}</button>
                 </div>
             </div>
@@ -49,7 +73,10 @@
                 <div class="categories">
                     <div class="categories__item" v-for="item in categories">
                         <label>
-                            <input type="checkbox" :name="item" :value="item" v-model="formData.checkedCategories">
+                            <input type="checkbox"
+                                   :name="item"
+                                   :value="item"
+                                   v-model="formData.checkedCategories">
                             {{ item }}
                         </label>
                     </div>
@@ -58,7 +85,9 @@
 
             <div class="form__item">
                 <label>Your message</label>
-                <textarea class="input-item textarea" v-model="formData.message" placeholder="Hello, I would like to talk about...">
+                <textarea class="input-item textarea"
+                          v-model="formData.message"
+                          placeholder="Hello, I would like to talk about...">
         </textarea>
             </div>
 
